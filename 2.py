@@ -17,4 +17,4 @@ for k in (n):
             z=[k,m]
             list_.append(z)
             break
-print(str(list_))
+print(list_)
