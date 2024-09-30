@@ -8,12 +8,13 @@ list_ = []
 for i in (a):
     for j in (a):
         if b == i * j:
-            list_.append(i)
-            list_.append(j)
+            e = [i,j]
+            list_.append(e)
+
 for k in (n):
     for m in (n):
         if b == k + m:
-            list_.append(k)
-            list_.append(m)
+            z=[k,m]
+            list_.append(z)
             break
-print(list_)
+print(str(list_))
