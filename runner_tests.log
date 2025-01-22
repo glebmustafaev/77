@@ -1,1 +1,16 @@
-
+2025-01-22 13:10:36,114 | WARNING | Неверный тип данных для объекта Runner
+Traceback (most recent call last):
+  File "D:\Project Python\pythonProject1\test_runner.py", line 23, in test_run
+    my_run = runner.Runner(12.3)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Project Python\pythonProject1\runner.py", line 6, in __init__
+    raise TypeError(f'Имя может быть только строкой, передано {type(name).__name__}')
+TypeError: Имя может быть только строкой, передано float
+2025-01-22 13:10:36,116 | WARNING | Неверная скорость для Runner
+Traceback (most recent call last):
+  File "D:\Project Python\pythonProject1\test_runner.py", line 13, in test_walk
+    my_walk = runner.Runner('Лев', -3)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project Python\pythonProject1\runner.py", line 11, in __init__
+    raise ValueError(f'Скорость не может быть отрицательной, сейчас {speed}')
+ValueError: Скорость не может быть отрицательной, сейчас -3
