@@ -3,6 +3,8 @@ import runner
 import unittest
 
 
+logging.basicConfig(level=logging.INFO, filemode='w', filename='runner_tests.log', encoding='utf-8',
+                    format='%(asctime)s | %(levelname)s | %(message)s')
 
 class RunnerTest(unittest.TestCase):
 
@@ -22,12 +24,11 @@ class RunnerTest(unittest.TestCase):
             for j in range(10):
                 my_run.run()
             self.assertEqual(my_run.distance, 100)
-            logging.info('"test_walk" выполнен успешно')
+            logging.info('"test_run" выполнен успешно')
         except TypeError:
             logging.warning('Неверный тип данных для объекта Runner', exc_info=True)
 
-
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO, filemode='w', filename='runner_tests.log', encoding='utf-8',
-                        format='%(asctime)s | %(levelnames)s | %(message)s')
+    unittest.main()
+
 
